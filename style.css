@@ -18,12 +18,10 @@ body {
 .price_list_section {
     display: flex;
     flex-direction: column;
-    background-color: #fffff5ff;
     margin-top: 50px;
     margin-left: 15%;
     margin-right: 15%;
     margin-bottom: 50px;
-    border-radius: 1rem;
     align-items: center; /* optional: centers the price list */
 }
 
@@ -31,6 +29,9 @@ body {
 .custom_tea_cookies_prices {
     text-align: center;
     margin-top: 40px;
+    background-color: #fffff5;
+    min-width: 800px;
+    border-radius: 1rem;
 }
 
 .cookie_types_row {
