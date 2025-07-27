@@ -26,20 +26,24 @@ body {
 }
 
 .homemade_cookies_prices,
-.custom_tea_cookies_prices {
+.custom_tea_cookies_prices,
+.cake_prices {
     text-align: center;
     margin-top: 40px;
     background-color: #fffff5;
     min-width: 800px;
     border-radius: 1rem;
+    padding: 10px;
 }
 
-.cookie_types_row {
+
+.cookie_types_row,
+.cake_types_row {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 40px;
-    margin-top: 20px;
+    gap: 80px;
+    margin-top: 10px;
     flex-wrap: wrap; /* so it stacks on small screens */
 }
 
@@ -48,7 +52,9 @@ body {
 .basic_cookies,
 .detailed_cookies,
 .elaborate_cookies,
-.cookie_extras {
+.cookie_extras,
+.single_tier_cakes,
+.two_tier_cakes {
     display: flex;
     flex-direction: column;
     align-items: center; /* centers the whole column */
@@ -60,15 +66,47 @@ body {
 .gourmet_cookies ul,
 .basic_cookies ul,
 .detailed_cookies ul,
-.elaborate_cookies,
-.cookie_extras {
-    align-self: stretch;    /* takes full width of the column */
-    text-align: left;       /* aligns text inside the list to the left */
-    padding-left: 20px;     /* optional: some left padding */
+.elaborate_cookies ul,
+.cookie_extras ul {
+    align-self: stretch;
+    text-align: left;
+    padding-left: 20px;
 }
 
 ul {
     list-style-type: none;
     margin: 0;
     padding: 0;
+}
+
+.single_tier_cakes h3,
+.two_tier_cakes h3 {
+    text-align: center;
+    margin-bottom: 15px; /* space between title and columns */
+}
+
+.columns_wrapper {
+    display: flex;
+    justify-content: center;
+    gap: 10px; /* space between columns */
+}
+
+.column {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-width: 100px;
+    flex-grow: 1;
+}
+
+.column:nth-child(2) {
+    min-width: 140px; /* middle column wider */
+}
+
+.column ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    width: 100%;
 }
