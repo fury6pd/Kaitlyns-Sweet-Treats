@@ -25,20 +25,22 @@ body {
     align-items: center; /* optional: centers the price list */
 }
 
-.homemade_cookies_prices,
-.custom_tea_cookies_prices,
-.cake_prices {
+.pricing_lists,
+.cake_flavors {
     text-align: center;
     margin-top: 40px;
     background-color: #fffff5;
-    min-width: 9000px;
+    width: 100%;
+    max-width: 1000px;
     border-radius: 1rem;
     padding: 10px;
 }
 
-
+.flavors_and_fillings_row,
 .cookie_types_row,
-.cake_types_row {
+.cake_types_row,
+.cake_flavors_row,
+.cake_fillings_row {
     display: flex;
     flex-direction: row;
     justify-content: center;
@@ -54,7 +56,12 @@ body {
 .elaborate_cookies,
 .cookie_extras,
 .single_tier_cakes,
-.two_tier_cakes {
+.two_tier_cakes,
+.cake_extras,
+.three_tier_cakes,
+.basic_cake_flavors,
+.specialty_cake_flavors,
+.cake_filling_types {
     display: flex;
     flex-direction: column;
     align-items: center; /* centers the whole column */
@@ -67,7 +74,12 @@ body {
 .basic_cookies ul,
 .detailed_cookies ul,
 .elaborate_cookies ul,
-.cookie_extras ul {
+.cookie_extras ul,
+.basic_cake_flavors ul,
+.single_tier_cakes ul,
+.basic_cake_flavors ul,
+.specialty_cake_flavors ul,
+.cake_filling_types ul {
     align-self: stretch;
     text-align: left;
     padding-left: 20px;
@@ -83,6 +95,25 @@ ul {
 .two_tier_cakes h3 {
     text-align: center;
     margin-bottom: 15px; /* space between title and columns */
+}
+
+.single_tier_cakes,
+.two_tier_cakes,
+.cake_extras,
+.three_tier_cakes {
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.note {
+    margin-top: 20px;
+    margin-left: 10%;
+    margin-right: 10%;
+    text-align: center;
+    font-size: 0.95rem;
+    color: #555;
 }
 
 .columns_wrapper {
