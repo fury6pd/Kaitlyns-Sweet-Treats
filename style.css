@@ -12,77 +12,76 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    margin-top: 50px;
+    margin-top: 3rem;
 }
 
 .price_list_section {
     display: flex;
     flex-direction: column;
-    margin-top: 50px;
-    margin-left: 15%;
-    margin-right: 15%;
-    margin-bottom: 50px;
-    align-items: center; /* optional: centers the price list */
+    margin: 3rem 15% 3rem 15%;
+    align-items: center;
 }
 
 .pricing_lists,
 .cake_flavors {
     text-align: center;
-    margin-top: 40px;
+    margin-top: 2.5rem;
     background-color: #fffff5;
     width: 100%;
     max-width: 1000px;
     border-radius: 1rem;
-    padding: 10px;
+    padding: 1rem;
 }
 
-.flavors_and_fillings_row,
-.cookie_types_row,
-.cake_types_row,
-.cake_flavors_row,
-.cake_fillings_row {
+.flavors_and_fillings_row {
     display: flex;
     flex-direction: row;
     justify-content: center;
-    gap: 80px;
-    margin-top: 10px;
-    flex-wrap: wrap; /* so it stacks on small screens */
+    gap: 5rem;
+    margin-top: 0;
+    margin-bottom: 0;
+    flex-wrap: wrap;
 }
 
-.classic_cookies,
-.gourmet_cookies,
-.basic_cookies,
-.detailed_cookies,
-.elaborate_cookies,
-.cookie_extras,
-.single_tier_cakes,
-.two_tier_cakes,
-.cake_extras,
-.three_tier_cakes,
-.basic_cake_flavors,
-.specialty_cake_flavors,
-.cake_filling_types {
+.flavors_and_fillings_type_block {
     display: flex;
     flex-direction: column;
-    align-items: center; /* centers the whole column */
-    width: 300px;
+    width: 100%;
+    text-align: center;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
 }
 
-/* LEFT-align list inside the columns */
-.classic_cookies ul,
-.gourmet_cookies ul,
-.basic_cookies ul,
-.detailed_cookies ul,
-.elaborate_cookies ul,
-.cookie_extras ul,
-.basic_cake_flavors ul,
-.single_tier_cakes ul,
-.basic_cake_flavors ul,
-.specialty_cake_flavors ul,
-.cake_filling_types ul {
+.flavors_and_fillings_type_block h4 {
+    margin-top: 0;
+    margin-bottom: 0; /* adjust this value as needed */
+}
+
+.flavors_and_fillings_type_block ul {
+    text-align: center;
+    padding-left: 0;
+    display: inline-block; /* shrink wrap the list */
+}
+
+.types_flavors_and_fillings_lists {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+    max-width: 300px;
+    margin-top: 0;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+}
+
+/* Left-align list items inside flavor/filling columns */
+.types_flavors_and_fillings_lists ul {
     align-self: stretch;
     text-align: left;
-    padding-left: 20px;
+    padding-left: 1.25rem;
 }
 
 ul {
@@ -91,29 +90,27 @@ ul {
     padding: 0;
 }
 
-.single_tier_cakes h3,
-.two_tier_cakes h3 {
+.flavors_and_fillings_row ul {
     text-align: center;
-    margin-bottom: 15px; /* space between title and columns */
 }
 
-.single_tier_cakes,
-.two_tier_cakes,
-.cake_extras,
-.three_tier_cakes {
-    width: 300px;
+.cake_tiers_and_extras {
+    width: 100%;
+    max-width: 300px;
     display: flex;
     flex-direction: column;
     align-items: center;
 }
 
 .note {
-    margin-top: 20px;
+    display: block;
+    margin-top: 0.5rem;
     margin-left: 10%;
     margin-right: 10%;
     text-align: center;
     font-size: 0.95rem;
     color: #555;
+    width: 100%;
 }
 
 .columns_wrapper {
