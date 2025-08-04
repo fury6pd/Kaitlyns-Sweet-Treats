@@ -1,11 +1,25 @@
+/* @font-face {
+  font-family: 'The_Seasons';
+  src: url('fonts/FONTSPRINGDEMO-TheSeasonsRegular.woff2') format('woff2'),
+       url('fonts/FONTSPRINGDEMO-TheSeasonsRegular.woff') format('woff');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+} */
+
 body {
-    background-image: url('images/KST_bg_light_blue_cross_pattern.png'); /* path to your image */
+    font-family: 'The_Seasons', sans-serif;
+    background-image: url('images/KST_bg_light_blue_cross_pattern.png');
     background-repeat: no-repeat;
-    background-size: cover;       /* cover entire viewport */
-    background-position: center;  /* center the image */
-    background-attachment: fixed; /* makes background static (doesn't scroll) */
-    margin: 0;                    /* remove default margin */
-    min-height: 100vh;            /* ensure full height */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+    margin: 0;
+    min-height: 100vh;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: 'The_Seasons', sans-serif;
 }
 
 .KSTlogo {
@@ -56,13 +70,13 @@ body {
 
 .flavors_and_fillings_type_block h4 {
     margin-top: 0;
-    margin-bottom: 0; /* adjust this value as needed */
+    margin-bottom: 0;
 }
 
 .flavors_and_fillings_type_block ul {
     text-align: center;
     padding-left: 0;
-    display: inline-block; /* shrink wrap the list */
+    display: inline-block;
 }
 
 .types_flavors_and_fillings_lists {
@@ -76,12 +90,12 @@ body {
     padding-top: 0;
     padding-bottom: 0;
 }
-
-/* Left-align list items inside flavor/filling columns */
 .types_flavors_and_fillings_lists ul {
-    align-self: stretch;
-    text-align: left;
-    padding-left: 1.25rem;
+    text-align: center;    /* center the list items */
+    padding-left: 0;       /* remove left padding */
+    margin-left: auto;
+    margin-right: auto;    /* horizontally center the ul */
+    display: inline-block; /* shrink-wrap width to content */
 }
 
 ul {
@@ -114,7 +128,7 @@ ul {
 .columns_wrapper {
     display: flex;
     justify-content: center;
-    gap: 10px; /* space between columns */
+    gap: 10px;
 }
 
 .column {
@@ -126,7 +140,7 @@ ul {
 }
 
 .column:nth-child(2) {
-    min-width: 140px; /* middle column wider */
+    min-width: 140px;
 }
 
 .column ul {
@@ -135,4 +149,115 @@ ul {
     margin: 0;
     text-align: left;
     width: 100%;
+}
+
+@media (max-width: 600px) {
+    .KSTlogo img {
+        width: 250px;
+    }
+
+    .price_list_section {
+        margin: 2rem 5%;
+    }
+
+    /* Allow .flavors_and_fillings_row children to stack on phones */
+    .flavors_and_fillings_row {
+        flex-wrap: wrap;            /* allow stacking */
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .types_flavors_and_fillings_lists,
+    .cake_tiers_and_extras {
+        max-width: 300px;           /* constrain width */
+        width: 100%;                /* fill width when stacked */
+        padding: 0.5rem;
+        margin: 0 auto;
+    }
+
+    /* Inside each child: keep columns side-by-side, no stacking */
+    .columns_wrapper {
+        display: flex !important;
+        flex-direction: row !important;  /* force row */
+        flex-wrap: nowrap !important;    /* no wrap */
+        justify-content: center;
+        gap: 0.5rem;
+        overflow-x: visible !important;  /* no scrollbar */
+    }
+
+    .column {
+        min-width: 100px;
+        flex: 1 1 auto;                 /* allow grow/shrink */
+        align-items: flex-start;
+    }
+
+    .note {
+        margin: 1rem 5%;
+        font-size: 0.9rem;
+        text-align: center;
+    }
+
+    /* Target the Fillings section lists */
+    h3 + .flavors_and_fillings_row {
+        flex-direction: column !important;
+        gap: 0 !important;           /* REMOVE vertical gap */
+    }
+
+    h3 + .flavors_and_fillings_row .types_flavors_and_fillings_lists {
+        width: 100% !important;
+        max-width: none !important;
+        flex: none !important;
+        margin: 0 !important;        /* REMOVE any margin */
+        padding: 0rem 0;           /* Optional: top/bottom padding only */
+    }
+}
+
+
+/* ----------------------------------------------
+   TABLETS: Target screens 601px – 1024px wide
+------------------------------------------------ */
+@media (min-width: 601px) and (max-width: 1024px) {
+    .KSTlogo img {
+        width: 300px;
+    }
+
+    .price_list_section {
+        margin: 2rem 8%;
+    }
+
+    .flavors_and_fillings_row {
+        gap: 2.5rem;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .columns_wrapper {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .column {
+        min-width: 120px;
+        flex-grow: 1;
+        align-items: flex-start;
+    }
+
+    .types_flavors_and_fillings_lists,
+    .cake_tiers_and_extras {
+        max-width: 90%;
+    }
+
+        /* Target the Fillings section lists */
+    h3 + .flavors_and_fillings_row {
+        flex-direction: column !important;
+        gap: 0 !important;           /* REMOVE vertical gap */
+    }
+
+    h3 + .flavors_and_fillings_row .types_flavors_and_fillings_lists {
+        width: 100% !important;
+        max-width: none !important;
+        flex: none !important;
+        margin: 0 !important;        /* REMOVE any margin */
+        padding: 0rem 0;           /* Optional: top/bottom padding only */
+    }
 }
