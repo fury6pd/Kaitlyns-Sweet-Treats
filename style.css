@@ -1,14 +1,5 @@
-/* @font-face {
-  font-family: 'The_Seasons';
-  src: url('fonts/FONTSPRINGDEMO-TheSeasonsRegular.woff2') format('woff2'),
-       url('fonts/FONTSPRINGDEMO-TheSeasonsRegular.woff') format('woff');
-  font-weight: normal;
-  font-style: normal;
-  font-display: swap;
-} */
-
 body {
-    font-family: 'The_Seasons', sans-serif;
+    font-family: 'Cormorant Garamond', serif;
     background-image: url('images/KST_bg_light_blue_cross_pattern.png');
     background-repeat: no-repeat;
     background-size: cover;
@@ -18,8 +9,14 @@ body {
     min-height: 100vh;
 }
 
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'The_Seasons', sans-serif;
+h1, h2, h3 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 700;
+}
+
+h4, h5, h6 {
+  font-family: 'Cormorant Garamond', serif;
+  font-weight: 500;
 }
 
 .KSTlogo {
