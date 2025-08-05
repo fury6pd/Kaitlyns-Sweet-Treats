@@ -218,28 +218,28 @@ ul {
 
         /* Increase heading font sizes */
     h1 {
-        font-size: 2rem; /* or adjust as you like */
+        font-size: 2.3rem; /* or adjust as you like */
     }
 
     h2 {
-        font-size: 1.75rem;
+        font-size: 2rem;
     }
 
     h3 {
-        font-size: 1.5rem;
+        font-size: 1.9rem;
     }
 
     h4 {
-        font-size: 1.3rem;
+        font-size: 1.7rem;
     }
 
     h5 {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     /* Increase body text font size (paragraphs, notes, lists, etc.) */
     body, p, li {
-        font-size: 1.1rem;
+        font-size: 1.5rem;
     }
 
     /* Optionally, increase the note font slightly more */
@@ -291,5 +291,36 @@ ul {
         flex: none !important;
         margin: 0 !important;
         padding: 0 !important;
+    }
+
+        /* Increase heading font sizes */
+    h1 {
+        font-size: 2rem; /* or adjust as you like */
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.3rem;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+    }
+
+    /* Increase body text font size (paragraphs, notes, lists, etc.) */
+    body, p, li {
+        font-size: 1.1rem;
+    }
+
+    /* Optionally, increase the note font slightly more */
+    .note {
+        font-size: 1rem;
     }
 }
