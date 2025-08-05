@@ -215,6 +215,37 @@ ul {
         margin: 0 !important;
         padding: 0 !important;
     }
+
+        /* Increase heading font sizes */
+    h1 {
+        font-size: 2rem; /* or adjust as you like */
+    }
+
+    h2 {
+        font-size: 1.75rem;
+    }
+
+    h3 {
+        font-size: 1.5rem;
+    }
+
+    h4 {
+        font-size: 1.3rem;
+    }
+
+    h5 {
+        font-size: 1.1rem;
+    }
+
+    /* Increase body text font size (paragraphs, notes, lists, etc.) */
+    body, p, li {
+        font-size: 1.1rem;
+    }
+
+    /* Optionally, increase the note font slightly more */
+    .note {
+        font-size: 1rem;
+    }
 }
 
 /* ----------- TABLET MEDIA ----------- */
