@@ -9,6 +9,7 @@ body {
     min-height: 100vh;
 }
 
+/* Headings */
 h1, h2, h3 {
     font-family: 'Cormorant Garamond', serif;
     font-weight: 700;
@@ -19,6 +20,7 @@ h4, h5, h6 {
     font-weight: 500;
 }
 
+/* Logo Section */
 .KSTlogo {
     display: flex;
     justify-content: center;
@@ -26,6 +28,7 @@ h4, h5, h6 {
     margin-top: 3rem;
 }
 
+/* Main Section */
 .price_list_section {
     display: flex;
     flex-direction: column;
@@ -33,6 +36,7 @@ h4, h5, h6 {
     align-items: center;
 }
 
+/* Pricing lists and cake flavors */
 .pricing_lists,
 .cake_flavors {
     text-align: center;
@@ -44,6 +48,7 @@ h4, h5, h6 {
     padding: 1rem;
 }
 
+/* Rows of flavors and fillings */
 .flavors_and_fillings_row {
     display: flex;
     flex-direction: row;
@@ -53,6 +58,7 @@ h4, h5, h6 {
     flex-wrap: wrap;
 }
 
+/* Flavor blocks */
 .flavors_and_fillings_type_block {
     display: flex;
     flex-direction: column;
@@ -72,6 +78,7 @@ h4, h5, h6 {
     display: inline-block;
 }
 
+/* Flavor & filling lists */
 .types_flavors_and_fillings_lists {
     display: flex;
     flex-direction: column;
@@ -90,6 +97,7 @@ h4, h5, h6 {
     display: inline-block;
 }
 
+/* Lists */
 ul {
     list-style-type: none;
     margin: 0;
@@ -100,6 +108,7 @@ ul {
     text-align: center;
 }
 
+/* Cake tiers and extras */
 .cake_tiers_and_extras {
     width: 100%;
     max-width: 300px;
@@ -110,6 +119,7 @@ ul {
     padding: 0;
 }
 
+/* Notes */
 .note {
     margin: 0.5rem 10%;
     text-align: center;
@@ -117,6 +127,7 @@ ul {
     color: #555;
 }
 
+/* Columns inside tiers and extras */
 .columns_wrapper {
     display: flex;
     justify-content: center;
@@ -162,90 +173,63 @@ ul {
 
     .types_flavors_and_fillings_lists,
     .cake_tiers_and_extras {
-        max-width: 300px;
+        max-width: 320px;
         width: 100%;
         padding: 0.5rem;
         margin: 0 auto;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .types_flavors_and_fillings_lists {
-        padding: 0 !important;
-        max-width: 320px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .columns_wrapper {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        justify-content: center !important;
-        gap: 0.5rem !important;
-        margin: 0 auto !important;
-        width: fit-content !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 0 auto;
+        width: fit-content;
     }
 
     .types_flavors_and_fillings_lists .columns_wrapper {
-        width: fit-content !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
+        width: fit-content;
+        max-width: 100%;
+        margin: 0 auto;
     }
 
     .types_flavors_and_fillings_lists .column {
-        align-items: center !important;
-        min-width: 100px !important;
+        align-items: center;
+        min-width: 100px;
     }
 
     .note {
         margin: 1rem 5%;
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-align: center;
     }
 
+    /* Stack flavor rows under headings */
     h3 + .flavors_and_fillings_row {
-        flex-direction: column !important;
-        gap: 0 !important;
+        flex-direction: column;
+        gap: 0;
     }
 
     h3 + .flavors_and_fillings_row .types_flavors_and_fillings_lists {
-        width: 100% !important;
-        max-width: none !important;
-        flex: none !important;
-        margin: 0 !important;
-        padding: 0 !important;
+        width: 100%;
+        max-width: none;
+        flex: none;
+        margin: 0;
+        padding: 0;
     }
 
-        /* Increase heading font sizes */
-    h1 {
-        font-size: 2.3rem; /* or adjust as you like */
-    }
-
-    h2 {
-        font-size: 2rem;
-    }
-
-    h3 {
-        font-size: 1.9rem;
-    }
-
-    h4 {
-        font-size: 1.7rem;
-    }
-
-    h5 {
-        font-size: 1.5rem;
-    }
-
-    /* Increase body text font size (paragraphs, notes, lists, etc.) */
-    body, p, li {
-        font-size: 1.5rem;
-    }
-
-    /* Optionally, increase the note font slightly more */
-    .note {
-        font-size: 1rem;
-    }
+    /* Increase font sizes on phone */
+    h1 { font-size: 2.3rem; }
+    h2 { font-size: 2rem; }
+    h3 { font-size: 1.9rem; }
+    h4 { font-size: 1.7rem; }
+    h5 { font-size: 1.5rem; }
+    body, p, li { font-size: 1.5rem; }
 }
 
 /* ----------- TABLET MEDIA ----------- */
@@ -267,75 +251,45 @@ ul {
 
     .types_flavors_and_fillings_lists,
     .cake_tiers_and_extras {
-        max-width: 300px;
+        max-width: 320px;
         width: 100%;
         padding: 0.5rem;
         margin: 0 auto;
-        display: flex !important;
-        flex-direction: column !important;
-        align-items: center !important;
-    }
-
-    .types_flavors_and_fillings_lists {
-        padding: 0 !important;
-        max-width: 320px !important;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
     }
 
     .columns_wrapper {
-        display: flex !important;
-        flex-direction: row !important;
-        flex-wrap: nowrap !important;
-        justify-content: center !important;
-        gap: 0.5rem !important;
-        margin: 0 auto !important;
-        width: fit-content !important;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        gap: 0.5rem;
+        margin: 0 auto;
+        width: fit-content;
     }
 
     .types_flavors_and_fillings_lists .columns_wrapper {
-        width: fit-content !important;
-        max-width: 100% !important;
-        margin: 0 auto !important;
+        max-width: 100%;
     }
 
     .types_flavors_and_fillings_lists .column {
-        align-items: center !important;
-        min-width: 100px !important;
+        align-items: center;
+        min-width: 100px;
     }
 
     .note {
         margin: 1rem 5%;
-        font-size: 0.9rem;
+        font-size: 1rem;
         text-align: center;
     }
 
-        /* Increase heading font sizes */
-    h1 {
-        font-size: 2rem; /* or adjust as you like */
-    }
-
-    h2 {
-        font-size: 1.75rem;
-    }
-
-    h3 {
-        font-size: 1.5rem;
-    }
-
-    h4 {
-        font-size: 1.3rem;
-    }
-
-    h5 {
-        font-size: 1.1rem;
-    }
-
-    /* Increase body text font size (paragraphs, notes, lists, etc.) */
-    body, p, li {
-        font-size: 1.1rem;
-    }
-
-    /* Optionally, increase the note font slightly more */
-    .note {
-        font-size: 1rem;
-    }
+    /* Tablet heading font sizes */
+    h1 { font-size: 2rem; }
+    h2 { font-size: 1.75rem; }
+    h3 { font-size: 1.5rem; }
+    h4 { font-size: 1.3rem; }
+    h5 { font-size: 1.1rem; }
+    body, p, li { font-size: 1.1rem; }
 }
