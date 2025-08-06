@@ -164,6 +164,12 @@ ul {
         margin: 2rem 5%;
     }
 
+    .pricing_lists,
+    .cake_flavors {
+        width: 100%;
+        box-sizing: border-box;
+    }
+
     .flavors_and_fillings_row {
         flex-wrap: wrap;
         justify-content: center;
