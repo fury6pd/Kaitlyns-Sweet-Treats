@@ -9,6 +9,66 @@ body {
     min-height: 100vh;
 }
 
+/* Navigation */
+
+html {
+  scroll-behavior: smooth;
+}
+
+.navbar {
+  background-color: transparent;
+  padding: 10px 0;
+}
+
+.navbar ul {
+  display: flex;
+  justify-content: center;  /* center nav items inside ul */
+  gap: 2rem;
+  padding: 0;
+  margin: 0 auto;           /* center ul itself horizontally */
+  list-style: none;
+  width: max-content;       /* shrink ul to fit items exactly */
+  max-width: 100%;          /* but don't overflow viewport */
+}
+
+.nav-item {
+  background-color: #dc8e5e;
+  color: #fffff5;
+  padding: 5px 10px;
+  border-radius: 2px;
+  text-decoration: none;
+  flex: 0 0 200px;      /* fixed width for all nav items */
+  text-align: center;
+  white-space: nowrap;  /* prevent text wrapping */
+  box-sizing: border-box;
+}
+
+.nav-item a {
+  color: #fffff5;
+  text-decoration: none;
+  display: block;
+  width: 100%;
+  height: 100%;
+  padding: 5px 10px;
+}
+
+.back-to-top {
+  text-align: center;
+  margin: 2rem 0 1rem 0;
+  font-weight: 500;
+}
+
+.back-to-top a {
+  color: #dc8e5e; /* match your nav color */
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+.back-to-top a:hover {
+  text-decoration: underline;
+  cursor: pointer;
+}
+
 /* Headings */
 h1, h2, h3 {
     font-family: 'Cormorant Garamond', serif;
@@ -228,14 +288,6 @@ ul {
         margin: 0;
         padding: 0;
     }
-
-    /* Increase font sizes on phone */
-    h1 { font-size: 2rem; }
-    h2 { font-size: 1.75rem; }
-    h3 { font-size: 1.5rem; }
-    h4 { font-size: 1.3rem; }
-    h5 { font-size: 1.1rem; }
-    body, p, li { font-size: 1.1rem; }
 }
 
 /* ----------- TABLET MEDIA ----------- */
