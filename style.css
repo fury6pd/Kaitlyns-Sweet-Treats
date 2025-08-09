@@ -9,6 +9,12 @@ body {
     min-height: 100vh;
 }
 
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
 /* Navigation */
 
 html {
@@ -37,10 +43,9 @@ html {
   padding: 5px 10px;
   border-radius: 2px;
   text-decoration: none;
-  flex: 0 0 200px;      /* fixed width for all nav items */
+  flex: 0 0 160px;      /* fixed width for all nav items */
   text-align: center;
   white-space: nowrap;  /* prevent text wrapping */
-  box-sizing: border-box;
 }
 
 .nav-item a {
@@ -49,7 +54,6 @@ html {
   display: block;
   width: 100%;
   height: 100%;
-  padding: 5px 10px;
 }
 
 .back-to-top {
@@ -227,7 +231,6 @@ ul {
     .pricing_lists,
     .cake_flavors {
         width: 100%;
-        box-sizing: border-box;
     }
 
     .flavors_and_fillings_row {
