@@ -218,6 +218,24 @@ ul {
     width: 100%;
 }
 
+.site-footer {
+  width: 100%;
+  background-color: #fff; /* white background */
+  text-align: center;
+  padding: 20px 10px; /* some breathing room */
+  margin: 0; /* no extra margins */
+  box-sizing: border-box;
+}
+
+.site-footer p {
+  margin: 5px 0; /* small spacing between lines */
+  font-family: 'Cormorant Garamond', serif;
+}
+
+#footer-content {
+  scroll-margin-top: 80px; /* adjust to match your navbar height */
+}
+
 /* ----------- PHONE MEDIA ----------- */
 @media (max-width: 600px) {
     /* Hide nav menu by default on small screens */
