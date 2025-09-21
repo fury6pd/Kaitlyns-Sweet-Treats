@@ -14,17 +14,24 @@
     <body>
         <a id="top"></a>
 
-        <nav class="navbar">
-            <button class="nav-toggle" aria-label="Toggle navigation">
-            &#9776; <!-- hamburger icon -->
-            </button>
-            <ul>
-                <li class="nav-item"><a href="#homemade-cookies">Homemade Cookies</a></li>
-                <li class="nav-item"><a href="#custome-tea-cookies">Custome Tea Cookies</a></li>
-                <li class="nav-item"><a href="#cakes">Cakes</a></li>
-                <li class="nav-item"><a href="#cookie-cakes">Cookie Cakes</a></li>
-                <li class="nav-item"><a href="#footer-content">Contact Me</a></li>
-            </ul>
+        <nav class="navbar navbar-expand-md bg-light">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#top">KST</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+                </button>
+
+                <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#homemade-cookies">Homemade Cookies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#custome-tea-cookies">Custom Tea Cookies</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cakes">Cakes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#cookie-cakes">Cookie Cakes</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#footer-content">Contact Me</a></li>
+                </ul>
+                </div>
+            </div>
         </nav>
 
         <div class="KSTlogo">
@@ -504,6 +511,28 @@
         <div><p>Web design by Aaron Triche</p></div>
     </footer>
 
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"></script>
+        <script>
+            const navbar = document.querySelector('.navbar');
+            const navMenu = document.querySelector('.nav-menu');
+            const toggleBtn = document.querySelector('.nav-toggle');
+
+            function checkCollapse() {
+                // collapse if nav items overflow the navbar width
+                if (navMenu.scrollWidth > navbar.clientWidth) {
+                navMenu.classList.add('collapsed');
+                } else {
+                navMenu.classList.remove('collapsed');
+                }
+            }
+
+            window.addEventListener('resize', checkCollapse);
+            window.addEventListener('load', checkCollapse);
+
+            toggleBtn.addEventListener('click', () => {
+                navMenu.classList.toggle('active');
+            });
+            </script>
     </body>
 
 </html>

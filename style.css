@@ -40,8 +40,9 @@ html {
 .nav-item {
   background-color: #dc8e5e;
   color: #fffff5;
-  padding: 5px 10px;
+  padding: 2px 5px;
   border-radius: 2px;
+  font-size: 0.75rem;
   text-decoration: none;
   flex: 0 0 160px;      /* fixed width for all nav items */
   text-align: center;
@@ -236,6 +237,15 @@ ul {
   scroll-margin-top: 80px; /* adjust to match your navbar height */
 }
 
+.nav-menu.collapsed {
+  display: none;
+}
+
+.nav-menu.collapsed.active {
+  display: flex;
+  flex-direction: column;
+}
+
 /* ----------- PHONE MEDIA ----------- */
 @media (max-width: 600px) {
     /* Hide nav menu by default on small screens */
@@ -346,6 +356,8 @@ ul {
         padding: 0;
     }
 }
+
+
 
 /* ----------- TABLET MEDIA ----------- */
 @media (min-width: 601px) and (max-width: 1024px) {
